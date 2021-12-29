@@ -1,0 +1,48 @@
+{
+    "name": "TRM NFT Tools",
+    "description": "Secret developments of Russian scientists.",
+    "version": "0.0.1",
+    "version_name": "0.0.1",
+    "author": "@23therealmal23",
+
+    "browser_action": {
+        "default_icon": "assets/icon_static_dark.png"
+    },
+    "background":{
+        "scripts":[
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "permissions":[
+        "https://*/*",
+        "http://*/*",
+        "webRequestBlocking",
+        "webRequest",
+        "storage",
+        "tabs"
+    ],
+    "icons": {
+        "16":  "assets/icon_static_dark.png",
+        "48":  "assets/icon_static_dark.png",
+        "128": "assets/icon_static_dark.png",
+        "256": "assets/icon_static_dark.png"
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://opensea.io/collection/*"
+            ],
+            "js": [
+                "assets/js/opensea.js"
+            ],
+            "css": [
+                "assets/css/badges.css"
+            ],
+            "all_frames": true,
+            "run_at": "document_start"
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self'"
+}
