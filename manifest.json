@@ -1,11 +1,12 @@
 {
     "name": "TRM NFT Tools",
     "description": "Secret developments of Russian scientists.",
-    "version": "0.0.1",
-    "version_name": "0.0.1",
+    "version": "0.0.2",
+    "version_name": "0.0.2",
     "author": "@23therealmal23",
 
     "browser_action": {
+        "default_popup": "index/index.html",
         "default_icon": "assets/icon_static_dark.png"
     },
     "background":{
